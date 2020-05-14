@@ -12,6 +12,7 @@
     <input type="text" id="num2" placeholder="숫자입력.." />
     <span>=</span>
     <strong id="result">0</strong>
+    <button onclick="javascript:clearAll();">clear</button>
     <script>
         function plus(){
             var num1=document.querySelector('#num1');
@@ -21,6 +22,18 @@
             result.innerText=parseInt(num1.value)+parseInt(num2.value);
             num1.value="";
             num2.value="";
+        };
+
+        function clearAll() {
+            var num1=document.querySelector('#num1');
+            var num2=document.querySelector('#num2');
+
+            
+            var result=document.querySelector('#result');
+            num1.value="";
+            num2.value="";
+            result.innerHTML="0";
+
         };
     </script>
 </body>

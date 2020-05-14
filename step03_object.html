@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step03_object.html</title>
+</head>
+<body>
+    <h1>plain object 테스트</h1>
+    <script>
+        //plain object 객체 리터럴{key:value , ...} 형식이며 순서가 중요치 않은 데이터에 사용
+        var mem1={num:1 , name:"김구라" , addr:"노량진"};
+        var mem2={};
+        var a,b;
+
+
+
+        mem2.num=2;
+        mem2.name="해골";
+        mem2.addr="행신동";  
+
+        a=mem1.name;
+        b=mem2.addr;
+        mem1.addr="독산동";
+        console.log(mem1.addr); 
+        
+        
+    </script>
+</body>
+</html>

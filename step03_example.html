@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step03_example.html</title>
+</head>
+<body>
+    <h1>plain object 테스트</h1>
+    <input type="text" id="name" placeholder="이름 입력..." />
+    <input type="text" id="addr" placeholder="주소 입력..." />
+    <button onclick="save()">임시 저장</button>
+    <button onclick="show()">저장된 정보 보기</button>
+    <p id="console"></p>
+    
+    <script>
+        var data=[];
+        var n=0;
+        var save=function() {
+            var name=document.querySelector("#name");
+            var addr=document.querySelector("#addr");
+
+
+            data[n]={dname:name.value, daddr:addr.value};
+            n++;
+            
+            name.value="";
+            addr.value="";
+        };
+
+        var show=function() {
+            var console=document.querySelector("#console");
+
+            console.innerText="";
+
+            for(var i=0;i<data.length;i++) {
+                console.innerHTML+="이름은 "+data[i].dname+" 주소는 "+data[i].daddr+"입니다.<br />"
+            }
+        }
+    </script>
+</body>
+</html>

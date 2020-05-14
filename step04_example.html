@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step04_example.html</title>
+    <style>
+        a:hover {
+            color: red;
+        }
+        a {
+            color:black;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>array 테스트</h1>
+    <input type="text" id="msg" placeholder="할일 입력..." />
+    <button onclick="save()">저장하기</button>
+    <button onclick="show()">저장된 할일 보기</button>
+    <p id="console"></p>
+    <script>
+        var msgs=[];
+        var save = function () {
+            var work=document.querySelector("#msg");
+            msgs.push(work.value);
+
+            work.value="";
+        };
+
+        var show = function () {
+            var console=document.querySelector("#console");
+            console.innerText="";
+            for(var i=0;i<msgs.length;i++) {
+                console.innerHTML+="<a href='#' onclick='new function() {msgs.splice("+i+",1); show();};'>"+msgs[i]+"</a> <br/>";
+            }        
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step05_function03.html</title>
+</head>
+
+<body>
+    <h1>function 테스트</h1>
+    <button onclick="test()">test함수</button>
+    <script>
+        var f1 = function() {
+            console.log("f1() 호출");
+        };
+
+        var f2 = function() {
+            console.log("f2() 호출");
+            return 999;
+        };
+        var f3 = function() {
+            console.log("f3() 호출");
+            var msg="안녕";
+            return msg;
+        };
+
+        var test= function() {
+          var a=f1();
+          var b=f2();
+          var c=f3();  
+        };
+    </script>
+</body>
+
+</html>
